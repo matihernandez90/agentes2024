@@ -1,0 +1,209 @@
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #333;
+    font-family: 'Helvetica', Arial, sans-serif;
+}
+
+.nav-bar {
+    background-color: #333;
+    border-color: antiquewhite;
+}
+
+.titulo {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #cff108;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.carousel {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Puedes ajustar si es necesario */
+}
+
+.carousel .carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px; /* Ajusta el ancho deseado */
+    height: 500px; /* Ajusta el alto deseado */
+    padding: 0; /* Añade espacio interno si es necesario */
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+}
+
+.formulario .seccion {
+    margin-bottom: 20px;
+}
+
+/* Estilos para campos de entrada, selectores y áreas de texto */
+.input-field {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-field label {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    position: absolute;
+    top: 25px; /* Ajusta la posición vertical del label */
+    left: 12px; /* Ajusta la posición horizontal del label */
+    transition: 0.2s ease-out; /* Transición suave para el label */
+}
+
+.input-field input[type=text],
+.input-field input[type=email],
+.input-field input[type=tel],
+.input-field select,
+.input-field textarea {
+    width: 100%;
+    padding: 12px; /* Ajusta el padding para un tamaño de texto uniforme */
+    margin-top: 8px; /* Ajusta el margen superior */
+    margin-bottom: 16px; /* Ajusta el margen inferior */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=tel]:focus,
+.input-field select:focus,
+.input-field textarea:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+    outline: none; /* Quita el contorno por defecto en algunos navegadores */
+}
+
+.input-field input[type=text]:valid + label,
+.input-field input[type=email]:valid + label,
+.input-field input[type=tel]:valid + label,
+.input-field select:valid + label,
+.input-field textarea:valid + label {
+    transform: translateY(-24px) scale(0.75); /* Ajusta el tamaño del label */
+    color: #000;
+}
+
+.input-field input[type=text]:focus + label,
+.input-field input[type=email]:focus + label,
+.input-field input[type=tel]:focus + label,
+.input-field select:focus + label,
+.input-field textarea:focus + label {
+    color: #000;
+}
+
+.input-field textarea {
+    resize: vertical; /* Permite redimensionar verticalmente solo */
+}
+
+.file-field .btn {
+    height: 42px; /* Ajusta la altura del botón de archivo para que coincida con el input */
+    line-height: 42px; /* Alinea verticalmente el contenido del botón */
+    padding: 0 1rem; /* Ajusta el padding del botón */
+    background-color: #f0f0f0; /* Color de fondo del botón */
+    color: #000; /* Color del texto del botón */
+    border: 1px solid #ccc; /* Borde del botón */
+    border-radius: 4px; /* Radio del borde del botón */
+    cursor: pointer;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+.file-field .btn:hover {
+    background-color: #e0e0e0; /* Cambio de color de fondo al pasar el mouse */
+}
+
+.formulario button {
+    width: 100%;
+    padding: 12px;
+    background-color: #020202;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+}
+
+.formulario button:hover {
+    background-color: #555;
+}
+
+
+
+.file-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 8px 20px;
+    background-color: #f0f0f0;
+    color: #000;
+    border-radius: 4px;
+    margin-bottom: 12px; /* Espacio entre el botón y el input */
+}
+
+.btn input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.file-path-wrapper {
+    width: 80%;
+    border: none;
+}
+
+.file-path {
+    width: 80%;
+    padding: 8px;
+
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #000;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+    border: none;
+}
+
+.file-path:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}

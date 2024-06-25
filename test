@@ -1,0 +1,105 @@
+ <div class="col-12"> 
+        <div class="descripcion container">
+            <h2>Descripción del puesto de Agente de Tránsito</h2>
+            <p>Buscamos Personas Proactivas, que les guste trabajar en equipo, con vocación de servicio, sentido de la responsabilidad y pertenencia.
+                Funciones de los Agentes de Transito:
+                Ordenar y dirigir el tránsito. Ejercer el control del estacionamiento en la vía pública. Prevenir y hacer cesar la comisión de faltas y contravenciones de tránsito peatonal y vehicular. Ser autoridad de fiscalización y comprobación de infracciones a las normas vigentes en materia de tránsito y transporte.</p>
+        </div>
+    
+    </div>
+<!-- Formulario de inscripción -->
+        <div class="formulario container">
+            <h2>Formulario de Inscripción</h2>
+            <form action="procesar_formulario.php" method="post">
+                <!-- Sección de Datos Personales -->
+                <div class="seccion">
+                    <h3>Datos Personales</h3>
+                    <label for="apellido">Apellido*</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                    <label for="nombres">Nombres*</label>
+                    <input type="text" id="nombres" name="nombres" required>
+                    <label for="sexo">Sexo*</label>
+                    <select id="sexo" name="sexo" required>
+                        <option value="" disabled selected>-Seleccione-</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <label for="documento">Número de Documento*</label>
+                    <input type="text" id="documento" name="documento" required>
+                    <label for="cuil">CUIL*</label>
+                    <input type="text" id="cuil" name="cuil" required>
+                    <label for="fecha_nacimiento">Fecha de Nacimiento*</label>
+                    <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="dd/mm/aaaa" required>
+                    <label for="estado_civil">Est. Civil*</label>
+                    <select id="estado_civil" name="estado_civil" required>
+                        <option value="" disabled selected>-Seleccione-</option>
+                        <option value="soltero">Soltero/a</option>
+                        <option value="casado">Casado/a</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <label for="nacionalidad">Nacionalidad*</label>
+                    <select id="nacionalidad" name="nacionalidad" required>
+                        <option value="" disabled selected>-Seleccionar-</option>
+                    </select>
+                    <label for="reside">¿En qué localidad y barrio vive actualmente?*</label>
+                    <select id="reside" name="reside" required>
+                        <option value="" disabled selected>-Seleccione-</option>
+                    </select>
+                    <label for="localidad">Localidad*</label>
+                    <input type="text" id="localidad" name="localidad" required>
+                    <label for="barrio">Barrio*</label>
+                    <input type="text" id="barrio" name="barrio" required>
+                    <label for="direccion_dni">Dirección que figura en el DNI*</label>
+                    <input type="text" id="direccion_dni" name="direccion_dni" required>
+                    <label for="altura">Altura*</label>
+                    <input type="text" id="altura" name="altura" required>
+                    <label for="piso_dpto">Piso/Dpto</label>
+                    <input type="text" id="piso_dpto" name="piso_dpto">
+                </div>
+    
+                <!-- Sección de Datos de Contacto -->
+                <div class="seccion">
+                    <h3>Datos de Contacto</h3>
+                    <label for="tel_celular">Teléfono celular*</label>
+                    <input type="tel" id="tel_celular" name="tel_celular" required>
+                    <label for="tel_celular_alternativo">Teléfono celular alternativo</label>
+                    <input type="tel" id="tel_celular_alternativo" name="tel_celular_alternativo">
+                    <label for="tel_particular">Teléfono particular</label>
+                    <input type="tel" id="tel_particular" name="tel_particular">
+                    <label for="email">Correo electrónico*</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="facebook">Facebook</label>
+                    <input type="text" id="facebook" name="facebook">
+                    <label for="instagram">Instagram</label>
+                    <input type="text" id="instagram" name="instagram">
+                    <label for="otra_red">Otra Red</label>
+                    <input type="text" id="otra_red" name="otra_red">
+                </div>
+    
+                <!-- Sección de Formación Académica -->
+                <div class="seccion">
+                    <h3>Formación Académica</h3>
+                    <label for="titulo_secundario">¿Posee título secundario?*</label>
+                    <input type="radio" id="titulo_secundario_si" name="titulo_secundario" value="si" required>
+                    <label for="titulo_secundario_si">Sí</label>
+                    <input type="radio" id="titulo_secundario_no" name="titulo_secundario" value="no" required>
+                    <label for="titulo_secundario_no">No</label>
+                    <label for="secundario_en_curso">¿Está en curso?*</label>
+                    <input type="radio" id="curso_si" name="secundario_en_curso" value="si" required>
+                    <label for="curso_si">Sí</label>
+                    <input type="radio" id="curso_no" name="secundario_en_curso" value="no" required>
+                    <label for="curso_no">No</label>
+                    <label for="titulo_terciario">¿Posee título terciario o universitario?*</label>
+                    <input type="radio" id="titulo_terciario_si" name="titulo_terciario" value="si" required>
+                    <label for="titulo_terciario_si">Sí</label>
+                    <input type="radio" id="titulo_terciario_no" name="titulo_terciario" value="no" required>
+                    <label for="titulo_terciario_no">No</label>
+                    <label for="detalle_titulo">Detalle de título (si corresponde)</label>
+                    <textarea id="detalle_titulo" name="detalle_titulo"></textarea>
+                </div>
+    
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
