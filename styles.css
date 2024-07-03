@@ -251,6 +251,10 @@ body {
     .sidenav {
         display: block;
     }
+
+    .menu {
+        width: 80%;
+    }
 }
 
 
