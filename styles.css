@@ -239,7 +239,7 @@ body {
     align-items:end;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .sidenav-trigger {
         display: block;
     }
