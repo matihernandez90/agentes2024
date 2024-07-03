@@ -254,6 +254,7 @@ body {
 
     .menu {
         width: 80%;
+        display: none;
     }
 }
 
