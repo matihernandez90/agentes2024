@@ -13,10 +13,25 @@ body {
 }
 
 .nav-bar {
+    display: flex;
     background-color: #333;
     border-color: antiquewhite;
 }
 
+.nav-wrapper , .logo1 , .logo {
+    height: 100%; /* Ajusta la imagen para que ocupe el 100% de la altura de la barra de navegación */
+    max-height: 64px; /* Máximo alto permitido */
+    width:auto; /* Mantiene la proporción de la imagen */
+
+}
+
+
+
+.nav-wrapper .brand-logo img.responsive-logo {
+    height: 100%; /* Ajusta la imagen para que ocupe el 100% de la altura de la barra de navegación */
+    max-height: 64px; /* Máximo alto permitido */
+    width:auto; /* Mantiene la proporción de la imagen */
+}
 .titulo {
     font-size: 40px;
     margin-bottom: 40px;
@@ -126,7 +141,7 @@ body {
     line-height: 42px; /* Alinea verticalmente el contenido del botón */
     padding: 0 1rem; /* Ajusta el padding del botón */
     background-color: #f0f0f0; /* Color de fondo del botón */
-    color: #000; /* Color del texto del botón */
+    color: #113ed4; /* Color del texto del botón */
     border: 1px solid #ccc; /* Borde del botón */
     border-radius: 4px; /* Radio del borde del botón */
     cursor: pointer;
@@ -152,37 +167,9 @@ body {
     background-color: #555;
 }
 
-
-
 .file-field {
     display: flex;
     flex-direction: column;
-}
-
-.btn {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    padding: 8px 20px;
-    background-color: #f0f0f0;
-    color: #000;
-    border-radius: 4px;
-    margin-bottom: 12px; /* Espacio entre el botón y el input */
-}
-
-.btn input[type=file] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
 }
 
 .file-path-wrapper {
@@ -193,7 +180,6 @@ body {
 .file-path {
     width: 80%;
     padding: 8px;
-
     border-radius: 4px;
     box-sizing: border-box;
     color: #000;
@@ -207,3 +193,64 @@ body {
     border-color: #000;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidenav-trigger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.sidenav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    padding-top: 60px;
+    z-index: 999;
+}
+
+.sidenav a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    background-color: #575757;
+}
+
+.responsive-logo{
+    display: flex;
+    justify-content: right;
+    align-items:end;
+}
+
+@media (max-width: 600px) {
+    .sidenav-trigger {
+        display: block;
+    }
+
+    #nav-mobile {
+        display: none;
+    }
+
+    .sidenav {
+        display: block;
+    }
+}
+
+
